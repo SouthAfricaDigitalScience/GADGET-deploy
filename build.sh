@@ -40,7 +40,7 @@ else
   echo "continuing from previous builds, using source at " ${SRC_DIR}/${SOURCE_FILE}
 fi
 tar xzf ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
-# copy the correct Makefile to the build
-cp Makefile-${SITE}-${ARCH}-${OS} ${WORKSPACE}/Gadget-${VERSION}/Makefile
-cd ${WORKSPACE}/Gadget-${VERSION}
+# copy the correct Makefile to the buildS
+cp Makefile-${SITE}-${ARCH}-${OS} ${WORKSPACE}/Gadget-${VERSION}/Gadget2/Makefile
+cd ${WORKSPACE}/Gadget-${VERSION}/Gadget2
 make
