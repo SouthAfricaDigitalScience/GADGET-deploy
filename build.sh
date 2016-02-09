@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # the GADGET build script
 . /etc/profile.d/modules.sh
-
+module add  ci
 SOURCE_FILE=${NAME}-${VERSION}.tar.gz
 module add gsl/2.1
 module add gcc/${GCC_VERSION}
@@ -43,4 +43,4 @@ tar xzf ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 # copy the correct Makefile to the build
 cp Makefile-${SITE}-${ARCH}-${OS} ${WORKSPACE}/Gadget-${VERSION}/Makefile
 cd ${WORKSPACE}/Gadget-${VERSION}
-make 
+make
