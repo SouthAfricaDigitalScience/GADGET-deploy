@@ -20,7 +20,6 @@ echo ${SOFT_DIR}
 
 mkdir -p ${WORKSPACE}
 mkdir -p ${SRC_DIR}
-mkdir -p ${SOFT_DIR}
 
 #  Download the source file
 
