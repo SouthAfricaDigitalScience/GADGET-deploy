@@ -38,12 +38,12 @@ module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 setenv       GADGET2_VERSION       $VERSION
 setenv       GADGET2_DIR           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
-prepend-path PATH                  "$::(GADGET2_DIR)/bin"
+prepend-path PATH                  "$::env(GADGET2_DIR)/bin"
 MODULE_FILE
 ) > modules/$VERSION
 
-mkdir -p ${ASTRO_MODULES}/${NAME}
-cp modules/$VERSION ${ASTRO_MODULES}/${NAME}
+mkdir -vp ${ASTRO_MODULES}/${NAME}
+cp -vmodules/$VERSION ${ASTRO_MODULES}/${NAME}
 
 module avail ${NAME}
 
@@ -51,7 +51,7 @@ module avail ${NAME}
 cd ${WORKSPACE}
 module purge
 
-module add  deploy
+module add deploy
 module add ${NAME}
 
 which Gadget2
