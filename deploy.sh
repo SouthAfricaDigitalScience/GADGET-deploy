@@ -43,7 +43,7 @@ MODULE_FILE
 ) > modules/$VERSION
 
 mkdir -vp ${ASTRO_MODULES}/${NAME}
-cp -vmodules/$VERSION ${ASTRO_MODULES}/${NAME}
+cp -v modules/$VERSION ${ASTRO_MODULES}/${NAME}
 
 module avail ${NAME}
 
