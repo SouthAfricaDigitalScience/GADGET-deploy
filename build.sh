@@ -1,8 +1,8 @@
 #!/bin/bash -e
 # the GADGET build script
 . /etc/profile.d/modules.sh
-module add  ci
 SOURCE_FILE=${NAME}-${VERSION}.tar.gz
+module add  ci
 module add gsl/2.1
 module add gcc/${GCC_VERSION}
 module add openmpi/1.8.8-gcc-${GCC_VERSION}

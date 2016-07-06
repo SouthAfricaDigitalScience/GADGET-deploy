@@ -10,7 +10,7 @@ module add fftw/2.1.5-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 # re-build with the right links
-
+cd ${WORKSPACE}/Gadget-${VERSION}/Gadget2/
 make clean
 make -j2
 
