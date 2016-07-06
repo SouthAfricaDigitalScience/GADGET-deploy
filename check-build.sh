@@ -13,7 +13,6 @@ module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 cd ${WORKSPACE}/Gadget-${VERSION}/Gadget2
 cp -v ${WORKSPACE}/lcdm_gas.param $PWD
 mkdir -vp lcdm_gas
-ln -s ../ICs ICs
 echo "What ICs are there ? "
 ls ICs
 mpirun -np 2 ./Gadget2 lcdm_gas.param
