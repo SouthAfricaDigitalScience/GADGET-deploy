@@ -42,6 +42,7 @@ prepend-path PATH                  "$::env(GADGET2_DIR)/bin"
 MODULE_FILE
 ) > modules/$VERSION
 
+echo "hi" 
 mkdir -vp ${ASTRO_MODULES}/${NAME}
 cp -v modules/$VERSION ${ASTRO_MODULES}/${NAME}
 
