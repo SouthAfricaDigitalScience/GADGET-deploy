@@ -16,7 +16,7 @@ make -j2
 
 # if it runs, install it.
 mkdir -p ${SOFT_DIR}/bin
-cp -v ${WORKSPACE}//Gadget-${VERSION}/Gadget2 ${SOFT_DIR}/bin
+cp -v ${WORKSPACE}/Gadget-${VERSION}/Gadget2/Gadget2 ${SOFT_DIR}/bin
 chmod 755 ${SOFT_DIR}/bin/Gadget2
 mkdir -p modules
 (
