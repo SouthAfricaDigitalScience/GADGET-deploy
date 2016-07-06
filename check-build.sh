@@ -11,6 +11,7 @@ module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 # Need to test it
 cd ${WORKSPACE}/Gadget-${VERSION}/Gadget2
+cp ${WORKSPACE}/gassphere.param .
 mkdir -p gassphere
 mpirun -np 2 ./Gadget2 parameterfiles/gassphere.param
 
