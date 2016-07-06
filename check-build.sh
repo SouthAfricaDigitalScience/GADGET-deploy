@@ -11,9 +11,11 @@ module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 # Need to test it
 cd ${WORKSPACE}/Gadget-${VERSION}/Gadget2
-cp -v ${WORKSPACE}/gassphere.param parameterfiles/
+cp -v ${WORKSPACE}/gassphere.param $PWD
 mkdir -vp gassphere
-mpirun -np 2 ./Gadget2 parameterfiles/gassphere.param
+echo "What ICs are there ? "
+ls ICs
+mpirun -np 2 ./Gadget2 gassphere.param
 
 # if it runs, install it.
 mkdir -p ${SOFT_DIR}/bin

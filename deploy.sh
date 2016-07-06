@@ -9,11 +9,14 @@ module add openmpi/1.8.8-gcc-${GCC_VERSION}
 module add fftw/2.1.5-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
-# Need to test it
+# re-build with the right links
+
+make clean
+make -j2
 
 # if it runs, install it.
 mkdir -p ${SOFT_DIR}/bin
-cp Gadget2 ${SOFT_DIR}/bin
+cp -v ${WORKSPACE}//Gadget-${VERSION}/Gadget2 ${SOFT_DIR}/bin
 chmod 755 ${SOFT_DIR}/bin/Gadget2
 mkdir -p modules
 (
