@@ -11,9 +11,9 @@ module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 # Need to test it
 cd ${WORKSPACE}/Gadget-${VERSION}/Gadget2
-cp ${WORKSPACE}/gassphere.param .
-mkdir -p gassphere
-mpirun -np 2 ./Gadget2 parameterfiles/gassphere.param
+cp -v ${WORKSPACE}/gassphere.param .
+mkdir -vp gassphere
+mpirun -np 2 ./Gadget2 gassphere.param
 
 # if it runs, install it.
 mkdir -p ${SOFT_DIR}/bin
@@ -39,7 +39,7 @@ module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 setenv       GADGET2_VERSION       $VERSION
 setenv       GADGET2_DIR           /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
-prepend-path PATH           "$::(GADGET2_DIR)/bin"
+prepend-path PATH           "$::env(GADGET2_DIR)/bin"
 MODULE_FILE
 ) > modules/$VERSION
 
