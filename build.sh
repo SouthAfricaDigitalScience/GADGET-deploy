@@ -7,7 +7,7 @@ module add gsl/2.1
 module add gcc/${GCC_VERSION}
 module add openmpi/1.8.8-gcc-${GCC_VERSION}
 module add fftw/2.1.5-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
-module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
+module add hdf5/1.8.16-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 echo "REPO_DIR is "
 echo ${REPO_DIR}

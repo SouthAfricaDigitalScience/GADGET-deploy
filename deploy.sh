@@ -7,12 +7,12 @@ module add gsl/2.1
 module add gcc/${GCC_VERSION}
 module add openmpi/1.8.8-gcc-${GCC_VERSION}
 module add fftw/2.1.5-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
-module add hdf5/1.6.10-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
+module add hdf5/1.8.16-gcc-${GCC_VERSION}-mpi-${OPENMPI_VERSION}
 
 # re-build with the right links
 cd ${WORKSPACE}/Gadget-${VERSION}/Gadget2/
 make clean
-make -j2
+make 
 
 # if it runs, install it.
 mkdir -p ${SOFT_DIR}/bin
@@ -42,7 +42,7 @@ prepend-path PATH                  "$::env(GADGET2_DIR)/bin"
 MODULE_FILE
 ) > modules/$VERSION
 
-echo "hi" 
+echo "hi"
 mkdir -vp ${ASTRO_MODULES}/${NAME}
 cp -v modules/$VERSION ${ASTRO_MODULES}/${NAME}
 
